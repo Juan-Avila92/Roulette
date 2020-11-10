@@ -62,16 +62,16 @@ namespace Roulette.Controllers
         [Route("game/openbet/roulette/{id}/play")]
         public string PlayRoulette(int id, [FromBody] Roulette roulette)
         {
-            roulette.Id = id;
-            Roulette rouletteToBeUpdated = Services.RouletteBusiness.PlayRoulette(roulette);
-            NoContentResult result = Services.RouletteBusiness.UpdateRouletteStateIfExists(contextDb, rouletteToBeUpdated);
+            Roulette rouletteToPlayed = Services.RouletteBusiness.GetRouletteById(contextDb, id);
+            Roulette playedRoulette = Services.RouletteBusiness.PlayRoulette(rouletteToPlayed);
+            NoContentResult result = Services.RouletteBusiness.UpdateRouletteStateIfExists(contextDb, playedRoulette);
             if (result != null)
             {
-                return string.Format("Roulette with Id: {0} has been opened.", id);
+                return string.Format("Roulette with Id: {0} has been played. Winner number is: ", playedRoulette.BetResult);
             }
             else
             {
-                return string.Format("There is no roulette with Id: {0} .", id); ;
+                return string.Format("Roulette with Id: {0} is not opened .", id); ;
             }
         }
     }
