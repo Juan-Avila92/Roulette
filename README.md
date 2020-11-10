@@ -1,18 +1,18 @@
 # Roulette
 
-#ENDPOINTS
+# ENDPOINTS
 
-#POST ROULETTE
+# POST ROULETTE
 
-/game/roulette
-
+_/game/roulette
+```
 Response: 
 {
     "id": 1,
     "isOpen": false,
     "betResult": 0
 }
-
+```
 #GET ROULETTES
 /game/roulettes
 
