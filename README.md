@@ -5,6 +5,9 @@
 # POST ROULETTE
 /game/roulette
 ```
+Body:
+{}
+
 Response: 
 {
     "id": 1,
