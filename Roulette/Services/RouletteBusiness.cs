@@ -12,7 +12,7 @@ namespace Roulette.Services
     {
         public static Roulette GetRouletteById(RouletteDbContext context, int id)
         {
-            return context.Roulettes.ToList().FirstOrDefault(roulette => roulette.Id == id);
+            return context.Roulettes.FirstOrDefault(roulette => roulette.Id == id);
         }
         public static NoContentResult UpdateRouletteStateIfExists(RouletteDbContext context, Roulette rouletteToBeUpdated)
         {
@@ -36,9 +36,21 @@ namespace Roulette.Services
 
         public static Roulette PlayRoulette(Roulette roulette)
         {
-            Random random = new Random();
-            roulette.BetResult = random.Next(0, 36);
+            if(IsRouletteOpen(roulette))
+            {
+                Random random = new Random();
+                roulette.BetResult = random.Next(0, 36);
+                return roulette;
+            }
             return roulette;
+        }
+
+        public static bool IsRouletteOpen(Roulette roulette)
+        {
+            if(roulette.IsOpen) {
+                return true;
+            }
+            return false;
         }
 
     }
