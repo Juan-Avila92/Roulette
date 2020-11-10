@@ -9,7 +9,6 @@ using Roulette.Models;
 namespace Roulette.Controllers
 {
     [ApiController]
-    
     public class RouletteController : ControllerBase
     {
         private readonly RouletteDbContext contextDb;
@@ -23,7 +22,12 @@ namespace Roulette.Controllers
         [Route("game/roulettes")]
         public List<Roulette> Get()
         {
-            return contextDb.Roulettes.ToList();
+            try {
+                return contextDb.Roulettes.ToList();
+            } catch(Exception e)
+            {
+                throw new ArgumentNullException("There are no roulettes in database");
+            }
         }
 
         [HttpPost]
@@ -41,14 +45,31 @@ namespace Roulette.Controllers
 
         [HttpPut]
         [Route("game/openbet/roulette/{id}")]
-        public string PutAuthors(int id)
+        public string OpenRoulette(int id)
         {
-            Roulette rouletteToBeUpdated = RouletteBusiness.RouletteBusiness.GetRouletteById(contextDb, id);
-            NoContentResult result = RouletteBusiness.RouletteBusiness.UpdateRouletteStateIfExists(contextDb, rouletteToBeUpdated);
+            Roulette rouletteToBeUpdated = Services.RouletteBusiness.GetRouletteById(contextDb, id);
+            NoContentResult result = Services.RouletteBusiness.UpdateRouletteStateIfExists(contextDb, rouletteToBeUpdated);
             if (result != null) {
                 return string.Format("Roulette with Id: {0} has been opened.", id);
             }
             else {
+                return string.Format("There is no roulette with Id: {0} .", id); ;
+            }
+        }
+
+        [HttpPut]
+        [Route("game/openbet/roulette/{id}/play")]
+        public string PlayRoulette(int id, [FromBody] Roulette roulette)
+        {
+            roulette.Id = id;
+            Roulette rouletteToBeUpdated = Services.RouletteBusiness.PlayRoulette(roulette);
+            NoContentResult result = Services.RouletteBusiness.UpdateRouletteStateIfExists(contextDb, rouletteToBeUpdated);
+            if (result != null)
+            {
+                return string.Format("Roulette with Id: {0} has been opened.", id);
+            }
+            else
+            {
                 return string.Format("There is no roulette with Id: {0} .", id); ;
             }
         }
