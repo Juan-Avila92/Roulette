@@ -67,7 +67,7 @@ namespace Roulette.Controllers
             NoContentResult result = Services.RouletteBusiness.UpdateRouletteStateIfExists(contextDb, playedRoulette);
             if (result != null)
             {
-                return string.Format("Roulette with Id: {0} has been played. Winner number is: ", playedRoulette.BetResult);
+                return string.Format("Roulette with Id: {0} has been played. Winner number is: {1}", playedRoulette.Id, playedRoulette.BetResult);
             }
             else
             {

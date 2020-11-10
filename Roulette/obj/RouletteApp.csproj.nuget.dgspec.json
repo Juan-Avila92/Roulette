@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Roulette\\Roulette\\Roulette.csproj": {}
+    "D:\\Roulette\\Roulette\\RouletteApp.csproj": {}
   },
   "projects": {
-    "D:\\Roulette\\Roulette\\Roulette.csproj": {
+    "D:\\Roulette\\Roulette\\RouletteApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Roulette\\Roulette\\Roulette.csproj",
-        "projectName": "Roulette",
-        "projectPath": "D:\\Roulette\\Roulette\\Roulette.csproj",
+        "projectUniqueName": "D:\\Roulette\\Roulette\\RouletteApp.csproj",
+        "projectName": "RouletteApp",
+        "projectPath": "D:\\Roulette\\Roulette\\RouletteApp.csproj",
         "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
         "outputPath": "D:\\Roulette\\Roulette\\obj\\",
         "projectStyle": "PackageReference",

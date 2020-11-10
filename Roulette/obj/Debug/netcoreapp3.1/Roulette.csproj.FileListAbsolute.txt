@@ -47,11 +47,8 @@ D:\Roulette\Roulette\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 D:\Roulette\Roulette\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Roulette\Roulette\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
 D:\Roulette\Roulette\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.csprojAssemblyReference.cache
 D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.AssemblyInfoInputs.cache
 D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.AssemblyInfo.cs
-D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.csproj.CoreCompileInputs.cache
-D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.MvcApplicationPartsAssemblyInfo.cache
 D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.RazorTargetAssemblyInfo.cache
 D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.csproj.CopyComplete
 D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\staticwebassets\Roulette.StaticWebAssets.Manifest.cache
@@ -59,3 +56,8 @@ D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\staticwebassets\Roulette.StaticWebA
 D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.dll
 D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.pdb
 D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.genruntimeconfig.cache
+D:\Roulette\Roulette\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.json
+D:\Roulette\Roulette\bin\Debug\netcoreapp3.1\Properties\serviceDependencies.local.json
+D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.csproj.CoreCompileInputs.cache
+D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.MvcApplicationPartsAssemblyInfo.cache
+D:\Roulette\Roulette\obj\Debug\netcoreapp3.1\Roulette.csprojAssemblyReference.cache
