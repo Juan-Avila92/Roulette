@@ -14,7 +14,7 @@ CREATE TABLE [Users]
 [IdRoulette] INT NOT NULL REFERENCES Roulettes(Id),
 [Credit] VARCHAR(30),
 [Bet] VARCHAR(30),
-[RouletteNumber] VARCHAR(30),
+[RouletteNumber] INT,
 [RouletteColor] VARCHAR(30),
 CONSTRAINT PK_User PRIMARY KEY (Id),
 
