@@ -44,9 +44,15 @@ Response:
 ```
 
 # PUT ROULETTE - OPEN Roulette.
-/game/openbet/roulette/1
+/game/openbet/roulette/id
 ```
 Response: Roulette with Id: 4 has been opened.
+```
+
+# PUT ROULETTE - Play Roulette.
+/game/openbet/roulette/id/play
+```
+Response: Roulette with Id: 1 has been played. Winner number is: 28
 ```
 
 # GET Users
