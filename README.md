@@ -3,8 +3,7 @@
 # ENDPOINTS
 
 # POST ROULETTE
-
-_/game/roulette
+/game/roulette
 ```
 Response: 
 {
@@ -13,9 +12,9 @@ Response:
     "betResult": 0
 }
 ```
-#GET ROULETTES
+# GET ROULETTES
 /game/roulettes
-
+```
 Response:
 [
     {
@@ -39,17 +38,17 @@ Response:
         "betResult": 0
     }
 ]
+```
 
-
-#PUT ROULETTE - OPEN Roulette.
-
+# PUT ROULETTE - OPEN Roulette.
 /game/openbet/roulette/1
-
+```
 Response: Roulette with Id: 4 has been opened.
+```
 
-#GET Users
+# GET Users
 /game/users
-
+```
 response:
 [
     {
@@ -69,10 +68,12 @@ response:
         "rouletteColor": "Red"
     }
 ]
+```
 
-#POST User
-http://localhost:3020/game/user
+# POST User
+/game/user
 
+```
 Body:
 {
     "IdRoulette": 4,
@@ -91,3 +92,4 @@ response:
     "rouletteNumber": 6,
     "rouletteColor": "Red"
 }
+```
