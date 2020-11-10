@@ -22,12 +22,17 @@ namespace Roulette.Controllers
         [Route("game/users")]
         public List<User> Get()
         {
-            return contextDb.Users.ToList();
+            try {
+                return contextDb.Users.ToList();
+            }
+            catch (Exception e) {
+                throw new ArgumentNullException("There are no users in database");
+            }
         }
 
         [HttpPost]
         [Route("game/user")]
-        public IActionResult PostRoulette([FromBody] User user)
+        public IActionResult Post([FromBody] User user)
         {
             int openRouleteId = Services.RouletteBusiness.FindOpenRouletteId(contextDb);
             bool createUser = Services.UserBusiness.CanCreateAnUser(openRouleteId);
