@@ -34,6 +34,7 @@ namespace Roulette.Controllers
         [Route("game/roulette")]
         public IActionResult PostRoulette([FromBody] Roulette roulette)
         {
+            roulette.IsOpen = false;
             if (!this.ModelState.IsValid)
             {
                 return BadRequest();
