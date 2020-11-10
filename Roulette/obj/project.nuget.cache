@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Ag4Ol8lD/PTnEer84SfDEOngJR1P+6MKrL5muFEuRuVC1OwRFZ1JW69UWFzGsrWsn5GFYXHHbSM1UYvdaaiMAw==",
+  "dgSpecHash": "vWettc3juv2cc+iFitYql4s/7YS7XP3oAsacRuaRaQnhY6jgDO9Rye5UDEEGPWBUV7c1ZLweOOIJpR18bwIT+g==",
   "success": true,
   "projectFilePath": "D:\\Roulette\\Roulette\\Roulette.csproj",
   "expectedPackageFiles": [
@@ -14,6 +14,7 @@
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.9\\microsoft.entityframeworkcore.design.3.1.9.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.9\\microsoft.entityframeworkcore.relational.3.1.9.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.9\\microsoft.entityframeworkcore.sqlserver.3.1.9.nupkg.sha512",
+    "C:\\Users\\user\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.3\\microsoft.entityframeworkcore.tools.3.1.3.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.9\\microsoft.extensions.caching.abstractions.3.1.9.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.9\\microsoft.extensions.caching.memory.3.1.9.nupkg.sha512",
     "C:\\Users\\user\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.9\\microsoft.extensions.configuration.3.1.9.nupkg.sha512",

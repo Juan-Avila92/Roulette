@@ -16,7 +16,7 @@
     "IIS Express": {
       "commandName": "IISExpress",
       "launchBrowser": true,
-      "launchUrl": "api/roulettes",
+      "launchUrl": "game/roulettes",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
@@ -24,7 +24,7 @@
     "Roulette": {
       "commandName": "Project",
       "launchBrowser": false,
-      "launchUrl": "api/roulettes",
+      "launchUrl": "game/roulettes",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
