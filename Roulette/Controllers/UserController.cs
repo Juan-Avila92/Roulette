@@ -8,7 +8,8 @@ using Roulette.Models;
 
 namespace Roulette.Controllers
 {
-    public class UserController
+    [ApiController]
+    public class UserController : ControllerBase
     {
         private readonly RouletteDbContext contextDb;
 
@@ -18,10 +19,30 @@ namespace Roulette.Controllers
         }
 
         [HttpGet]
-        [Route("game/roulettes")]
-        public List<Roulette> Get()
+        [Route("game/users")]
+        public List<User> Get()
         {
-            return contextDb.Roulettes.ToList();
+            return contextDb.Users.ToList();
         }
+
+        [HttpPost]
+        [Route("game/user")]
+        public IActionResult PostRoulette([FromBody] User user)
+        {
+            int openRouleteId = Services.RouletteBusiness.FindOpenRouletteId(contextDb);
+            bool createUser = Services.UserBusiness.CanCreateAnUser(openRouleteId);
+            if(createUser)
+            {
+                if (!this.ModelState.IsValid) {
+                    return BadRequest();
+                }
+                this.contextDb.Users.Add(user);
+                this.contextDb.SaveChanges();
+                return Created($"roulettes/{user.Id}", user);
+            }
+            return Created($"roulettes/{user.Id}", "There are no open roulettes to join");
+        }
+
+
     }
 }
