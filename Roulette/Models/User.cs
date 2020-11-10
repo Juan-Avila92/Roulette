@@ -12,6 +12,6 @@ namespace Roulette.Models
         public string Credit { get; set; }
         public string Bet { get; set; }
         public int RouletteNumber { get; set; }
-        public int RouletteColor { get; set; }
+        public string RouletteColor { get; set; }
     }
 }
